@@ -21,3 +21,31 @@
 ## I'm ready
 * Run python script in powershell/cmd by changing to that directory and typing `python .\OsuDownloader.py`
 * Enter everything you got ready earlier, it should download the songs into the directory `.\songs\`
+
+## What does it look like?
+The output should look something like this as it downloads the songs:
+```
+-------362718-------
+https://osu.ppy.sh/beatmapsets/362718/download?noVideo=1
+Downloading beatmap: IM A BELIEVER
+
+-------264819-------
+https://osu.ppy.sh/beatmapsets/264819/download?noVideo=1
+Downloading beatmap: Chameleon Love  feat.Kano
+
+-------147177-------
+https://osu.ppy.sh/beatmapsets/147177/download?noVideo=1
+Downloading beatmap: Idola no Circus
+
+-------104801-------
+https://osu.ppy.sh/beatmapsets/104801/download?noVideo=1
+Downloading beatmap: Zetsubousei Hero Chiryouyaku (TV Size)
+
+-------264819-------
+https://osu.ppy.sh/beatmapsets/264819/download?noVideo=1
+Downloading beatmap: Chameleon Love  feat.Kano
+
+-------147962-------
+https://osu.ppy.sh/beatmapsets/147962/download?noVideo=1
+Downloading beatmap: Omega Rhythm
+```
