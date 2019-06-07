@@ -2,17 +2,17 @@
 
 ## What you'll need
 ### This git repository
-* Download in the top right as a zip file, or type the git clone url in the same place into your powershell/cmd 
+* Download in the top right as a zip file, or type the git clone url in the same place into your powershell/cmd .
 ### Osu session token
 * Go to chrome, log into OSU
-* Hit F12, open application tab on top
+* Hit F12, open application tab on top. (Might be under the >> drop down)
 * In storage on left under cookies, click 'https://osu.ppy.sh'
 * There should be a row called 'osu_session' , copy all the text on the right of it
 * This is your osu_session token, don't share it with anyone
 ### Osu players ID
 * Go to their (or your own) profile and in the URL, take the number
 ### Number of songs you want to download from their top songs
-* Self explanitory
+* Self explanatory
 ### Python 3
 * https://www.python.org/downloads/
 ### requests library
