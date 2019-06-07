@@ -1,4 +1,4 @@
-# Download Osu players top songs
+# Download Osu players most played songs
 
 ## What you'll need
 ### This git repository
