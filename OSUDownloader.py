@@ -16,12 +16,13 @@ osu_session_cookie = str(input('Enter osu session token, instructions in github 
 
 print('\nThere will be a 7 second delay between each download to prevent error for too many requests')
 
+beatmap_id_set = set() # set used to keep track of downloaded beatmaps
 beatmap_count = 0
 
 offset = 0
 
 while(number_of_maps > 0):
-
+    
     r = requests.get(f'https://osu.ppy.sh/users/{user_id}/beatmapsets/most_played?offset={offset}&limit={number_of_maps}')
     data = r.json()
 
@@ -37,6 +38,12 @@ while(number_of_maps > 0):
         beatmap_id = beatmap['beatmapset']['id']
         beatmap_title = removeDisallowedFilenameChars(str(beatmap['beatmapset']['title']))
 
+        if beatmap_id in beatmap_id_set:
+            print(f'\nSkipping duplicate --> {beatmap_count}. {beatmap_title}')
+            continue
+        else:
+            beatmap_id_set.add(beatmap_id)
+
         if beatmap_count != 1 : time.sleep(7) # delay put to prevent error 429, delay skipped for the first download
 
         download_url = f"https://osu.ppy.sh/beatmapsets/{beatmap_id}/download?noVideo=1"
@@ -50,10 +57,7 @@ while(number_of_maps > 0):
 
         with open(f'./songs/{beatmap_title}.osz', 'wb') as f:  
             f.write(r.content)
-        
-    number_of_maps -= 51 # number of maps left
-    offset += 51 # site only allows 51 downloads each request
 
     
-
-        
+    number_of_maps -= 51 # number of maps left
+    offset += 51 # site only allows 51 downloads each request
