@@ -21,6 +21,7 @@
 ## I'm ready
 * Run python script in powershell/cmd by changing to that directory and typing `python .\OsuDownloader.py`
 * Enter everything you got ready earlier, it should download the songs into the directory `.\songs\`
+* Duplicate entries found due to difficulty or mods will not be downloaded again
 
 ## What does it look like?
 The output should look something like this as it downloads the songs:
