@@ -15,8 +15,8 @@
 * Self explanatory
 ### Python 3
 * https://www.python.org/downloads/
-### requests library
-* Once python is installed, open powershell and type: `pip install requests`
+### Dependencies
+* Once python is installed, open powershell and type: `pip install -r requirements.txt`
 
 ## I'm ready
 * Run python script in powershell/cmd by changing to that directory and typing `python .\OsuDownloader.py`
