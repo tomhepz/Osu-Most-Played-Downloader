@@ -168,6 +168,7 @@ def download_from_osu(download_url, driver):
         try:
             # Clicks the download button if the without video button does not exist
             driverwait.until(EC.element_to_be_clickable((By.XPATH, "//*[text()[contains(.,'Download')]]"))).click()
+            return True
         except Exception as e:
             return False
         return False
