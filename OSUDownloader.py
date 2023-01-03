@@ -101,7 +101,7 @@ def get_download_url(beatmap_id, beatmap_url):
         if "\"download_disabled\":true" in r.text:
             download_url = f"https://beatconnect.io/b/{beatmap_id}"
         else:
-            download_url = f"{beatmap_url}/download?noVideo=1"
+            download_url = f"{beatmap_url}#osu/"
     except Exception as e:
         download_url = ""
     return download_url
